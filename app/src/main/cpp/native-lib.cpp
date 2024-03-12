@@ -12,12 +12,16 @@ void lib_main() {
         do {
             map = KittyMemory::getElfBaseMap("libil2cpp.so");
         } while (!map.isValid() && !map.isValidELF());
-        LOGI("libil2cpp.so: %08llX", map.startAddress);
 
-        Il2Cpp::Init("libil2cpp.so");
+        if (Il2Cpp::Init("libil2cpp.so") == -1) {
+            LOGE("ERROR");
+            return;
+        }
 
         // Initialize the classes
         ListCBaseEntry::add(std::make_shared<Account>());
+        ListCBaseEntry::add(std::make_shared<Finance>());
+        ListCBaseEntry::add(std::make_shared<GameItem>());
         ListCBaseEntry::add(std::make_shared<User>());
         ListCBaseEntry::Initialize();
     }).detach();

@@ -1,5 +1,3 @@
-#pragma once
-
 #include "CBaseEntry.hpp"
 
 class User : public CBaseEntry {
