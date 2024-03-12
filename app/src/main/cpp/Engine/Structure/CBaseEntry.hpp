@@ -12,9 +12,6 @@ public:
     virtual const char *getClass() = 0;
     virtual void Initialize() = 0;
 
-    // TODO: Add this to the game loop
-    virtual void Update() {};
-
     // Define all necessary hooks here
     virtual void Hook() = 0;
 

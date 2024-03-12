@@ -1,7 +1,7 @@
 #include "../Includes.hpp"
 
 User *(*LoadUser)(Account *);
-int LoadUserOnce;
+
 User *new_LoadUser(Account *account) {
     User *user = LoadUser(account);
     LOGI("Patch User::setCheat()");

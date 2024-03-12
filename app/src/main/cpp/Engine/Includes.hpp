@@ -28,9 +28,13 @@
  */
 class Account;
 class User;
+class GameItem;
+class Finance;
 
 /*
  * Include our structure classes
  */
 #include "Structure/Account.hpp"
 #include "Structure/User.hpp"
+#include "Structure/Finance.hpp"
+#include "Structure/GameItem.hpp"
